@@ -66,6 +66,7 @@ object PreferKey {
     const val enableCustomExport = "enableCustomExport"
     const val exportToWebDav = "webDavCacheBackup"
     const val exportNoChapterName = "exportNoChapterName"
+    const val exportEpubPlainChapterName = "exportEpubPlainChapterName"
     const val exportType = "exportType"
     const val exportPictureFile = "exportPictureFile"
     const val changeSourceCheckAuthor = "changeSourceCheckAuthor"

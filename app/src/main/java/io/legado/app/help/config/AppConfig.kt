@@ -410,6 +410,12 @@ object AppConfig : SharedPreferences.OnSharedPreferenceChangeListener {
             appCtx.putPrefBoolean(PreferKey.exportNoChapterName, value)
         }
 
+    var exportEpubPlainChapterName: Boolean
+        get() = appCtx.getPrefBoolean(PreferKey.exportEpubPlainChapterName)
+        set(value) {
+            appCtx.putPrefBoolean(PreferKey.exportEpubPlainChapterName, value)
+        }
+
     // 是否启用自定义导出 default->false
     var enableCustomExport: Boolean
         get() = appCtx.getPrefBoolean(PreferKey.enableCustomExport, false)

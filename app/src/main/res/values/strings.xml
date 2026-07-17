@@ -886,6 +886,7 @@
     <string name="dict">dict</string>
     <string name="unknown_error">unknown error</string>
     <string name="export_no_chapter_name">No export chapter names</string>
+    <string name="export_epub_plain_chapter_name">Disable default EPUB chapter title style</string>
     <string name="autobackup_fail">Autobackup failed\n%s</string>
     <string name="end">end</string>
     <string name="custom_group_summary">Turn off Replace Group / Turn on Add Group</string>
