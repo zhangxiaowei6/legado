@@ -383,7 +383,7 @@ class ExportBookService : BaseService() {
             if (AppConfig.exportEpubPlainChapterName) {
                 contentModel = contentModel.replace(
                     "<h2 class=\"head\">{title}</h2>",
-                    "<div>{title}</div>"
+                    "<div class=\"plain-chapter-title\">{title}</div>"
                 )
             }
             contentModel

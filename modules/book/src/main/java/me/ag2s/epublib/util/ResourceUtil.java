@@ -46,7 +46,12 @@ public class ResourceUtil {
         //    title_part2 = title_list[1];
         //}
         String ori_title = title;
-        if (!plainTitle) {
+        if (plainTitle) {
+            title = title.replaceFirst("\\s+", "</span><br /><span class=\"plain-chapter-title-name\">");
+            if (title.contains("</span>")) {
+                title = "<span class=\"plain-chapter-title-index\">" + title + "</span>";
+            }
+        } else {
             title = title.replaceFirst("\\s+", "</span><br />");
             if (title.contains("</span>")) {
                 title = "<span class=\"chapter-sequence-number\">" + title;
