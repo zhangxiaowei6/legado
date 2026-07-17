@@ -23,6 +23,17 @@ def name = "legado"
 def version = "3." + releaseTime()
 def gitCommits = Integer.parseInt('git rev-list HEAD --count'.execute().text.trim())
 
+def localPropertiesFile = rootProject.file("local.properties")
+def localProperties = new Properties()
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withInputStream { localProperties.load(it) }
+}
+["RELEASE_STORE_FILE", "RELEASE_STORE_PASSWORD", "RELEASE_KEY_ALIAS", "RELEASE_KEY_PASSWORD"].each { key ->
+    if (!project.hasProperty(key) && localProperties.getProperty(key) != null) {
+        project.ext.set(key, localProperties.getProperty(key))
+    }
+}
+
 android {
     compileSdk = compile_sdk_version
     namespace = 'io.legado.app'
