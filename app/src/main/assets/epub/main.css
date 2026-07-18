@@ -224,12 +224,12 @@ div.plain-chapter-title {
     duokan-text-indent: 0em;
     font-weight: normal;
     color: #000;
-    margin: 1em 0 4em 0;
+    margin: 1em 0 5em 0;
     line-height: 160%;
 }
 
 div.plain-chapter-title span.plain-chapter-title-index {
-    font-size: 0.85em;
+    font-size: 1em;
 }
 
 div.plain-chapter-title span.plain-chapter-title-name {
